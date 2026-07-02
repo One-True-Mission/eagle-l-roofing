@@ -403,10 +403,12 @@ p { color: var(--muted); }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 34px 30px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+.service-card .card-body { padding: 28px 30px 32px; }
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
@@ -566,10 +568,21 @@ p { color: var(--muted); }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 36px 32px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+.detail-card .card-body { padding: 30px 32px 36px; }
+
+/* Service imagery: every service card leads with a photo flush to the card top */
+.service-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 2px solid var(--red);
+}
+.detail-card .service-img { aspect-ratio: 16 / 7; }
 .detail-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
